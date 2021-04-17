@@ -1,0 +1,4 @@
+#Sat Apr 17 14:47:24 WIB 2021
+base.0=/Users/690614/Desktop/mobileApps/smart_land/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

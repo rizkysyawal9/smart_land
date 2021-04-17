@@ -1,0 +1,141 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Directory listing failed, path = '/usr/sbin/authserver' (OS Error: Permission denied, errno = 13)
+
+```
+#0      _Directory._fillWithDirectoryListing (dart:io-patch/directory_patch.dart:37:68)
+#1      _Directory.listSync (dart:io/directory_impl.dart:243:5)
+#2      ForwardingDirectory.listSync (package:file/src/forwarding/forwarding_directory.dart:45:12)
+#3      ForwardingDirectory.listSync (package:file/src/forwarding/forwarding_directory.dart:45:12)
+#4      _AssetDirectoryCache.variantsFor (package:flutter_tools/src/asset.dart:621:77)
+#5      _parseAssetFromFile (package:flutter_tools/src/asset.dart:794:35)
+#6      _parseAssets (package:flutter_tools/src/asset.dart:699:7)
+#7      ManifestAssetBundle.build (package:flutter_tools/src/asset.dart:161:53)
+<asynchronous suspension>
+#8      HotRunner._updateDevFS (package:flutter_tools/src/run_hot.dart:370:44)
+#9      HotRunner._restartFromSources (package:flutter_tools/src/run_hot.dart:476:47)
+#10     HotRunner._fullRestartHelper.<anonymous closure> (package:flutter_tools/src/run_hot.dart:676:39)
+#11     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:32)
+#12     _rootRun (dart:async/zone.dart:1190:13)
+#13     _CustomZone.run (dart:async/zone.dart:1093:19)
+#14     _runZoned (dart:async/zone.dart:1630:10)
+#15     runZonedGuarded (dart:async/zone.dart:1618:12)
+#16     runZoned (dart:async/zone.dart:1547:12)
+#17     asyncGuard (package:flutter_tools/src/base/async_guard.dart:109:3)
+#18     HotRunner._fullRestartHelper (package:flutter_tools/src/run_hot.dart:676:22)
+<asynchronous suspension>
+#19     HotRunner.restart (package:flutter_tools/src/run_hot.dart:620:44)
+<asynchronous suspension>
+#20     TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1544:61)
+#21     TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1588:13)
+#22     _rootRunUnary (dart:async/zone.dart:1198:47)
+#23     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#24     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#25     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#26     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#27     _SyncBroadcastStreamController._sendData (dart:async/broadcast_stream_controller.dart:385:25)
+#28     _BroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:250:5)
+#29     _AsBroadcastStreamController.add (dart:async/broadcast_stream_controller.dart:484:11)
+#30     _rootRunUnary (dart:async/zone.dart:1198:47)
+#31     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#32     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#33     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#34     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#35     _SinkTransformerStreamSubscription._add (dart:async/stream_transformers.dart:69:11)
+#36     _EventSinkWrapper.add (dart:async/stream_transformers.dart:15:11)
+#37     _StringAdapterSink.add (dart:convert/string_conversion.dart:238:11)
+#38     _StringAdapterSink.addSlice (dart:convert/string_conversion.dart:243:7)
+#39     _Utf8ConversionSink.addSlice (dart:convert/string_conversion.dart:317:20)
+#40     _ErrorHandlingAsciiDecoderSink.addSlice (dart:convert/ascii.dart:256:17)
+#41     _ErrorHandlingAsciiDecoderSink.add (dart:convert/ascii.dart:242:5)
+#42     _ConverterStreamEventSink.add (dart:convert/chunked_conversion.dart:72:18)
+#43     _SinkTransformerStreamSubscription._handleData (dart:async/stream_transformers.dart:121:24)
+#44     _rootRunUnary (dart:async/zone.dart:1198:47)
+#45     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#46     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#47     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#48     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#49     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:808:19)
+#50     _StreamController._add (dart:async/stream_controller.dart:682:7)
+#51     _StreamController.add (dart:async/stream_controller.dart:624:5)
+#52     _Socket._onData (dart:io-patch/socket_patch.dart:1969:41)
+#53     _rootRunUnary (dart:async/zone.dart:1206:13)
+#54     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#55     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1005:7)
+#56     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:357:11)
+#57     _BufferingStreamSubscription._add (dart:async/stream_impl.dart:285:7)
+#58     _SyncStreamControllerDispatch._sendData (dart:async/stream_controller.dart:808:19)
+#59     _StreamController._add (dart:async/stream_controller.dart:682:7)
+#60     _StreamController.add (dart:async/stream_controller.dart:624:5)
+#61     new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:1505:33)
+#62     _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1017:14)
+#63     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#64     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#65     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#66     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 1.23.0-18.1.pre, on Mac OS X 10.15.6 19G2021 x86_64, locale en)
+    • Flutter version 1.23.0-18.1.pre at /Users/690614/Development/flutter
+    • Framework revision 198df796aa (6 months ago), 2020-10-15 12:04:33 -0700
+    • Engine revision 1d12d82d9c
+    • Dart version 2.11.0 (build 2.11.0-213.1.beta)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    • Android SDK at /Users/690614/Library/Android/sdk
+    • Platform android-29, build-tools 29.0.2
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b49-5587405)
+    • All Android licenses accepted.
+
+[✗] Xcode - develop for iOS and macOS
+    ✗ Xcode installation is incomplete; a full installation is necessary for iOS development.
+      Download at: https://developer.apple.com/xcode/download/
+      Or install Xcode via the App Store.
+      Once installed, run:
+        sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+        sudo xcodebuild -runFirstLaunch
+    ✗ CocoaPods not installed.
+        CocoaPods is used to retrieve the iOS and macOS platform side's plugin code that responds to your plugin usage on the Dart side.
+        Without CocoaPods, plugins will not work on iOS or macOS.
+        For more info, see https://flutter.dev/platform-plugins
+      To install:
+        sudo gem install cocoapods
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 3.5)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 43.0.1
+    • Dart plugin version 191.8593
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b49-5587405)
+
+[✓] IntelliJ IDEA Community Edition (version 2020.3)
+    • IntelliJ at /Applications/IntelliJ IDEA CE.app
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+
+[✓] VS Code (version 1.55.2)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.21.0
+
+[✓] Connected device (3 available)
+    • Redmi Note 9 Pro (mobile) • a8b73cfc   • android-arm64  • Android 10 (API 29)
+    • Web Server (web)          • web-server • web-javascript • Flutter Tools
+    • Chrome (web)              • chrome     • web-javascript • Google Chrome 89.0.4389.128
+
+! Doctor found issues in 1 category.
+```
